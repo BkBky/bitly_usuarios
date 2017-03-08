@@ -1,0 +1,21 @@
+<h1>All Urls</h1>
+
+<h2><a href="/">Home</a></h2>
+
+<table>
+  <tr>
+    <th width="25">ID</th>
+    <th width="200">Long url</th>
+    <th>Short ulr</th>
+    <th>Click counter</th>
+  </tr>
+<% @ulr.each_with_index do |url, index| %>
+
+  <tr>
+    <td><%= index + 1 %>.</td>
+    <td><%= url.long_url %> </td>
+    <td><a href="/short_url/<%= url.id %>" target="_blank"><%= url.short_url %></a></td>
+    <td><%= url.click_count %></td>
+  </tr>
+<% end %>
+</table>

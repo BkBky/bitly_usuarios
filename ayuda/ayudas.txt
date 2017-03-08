@@ -1,0 +1,2 @@
+$ rake generate:model NAME=Url
+$ rake generate:migration NAME=create_urls
